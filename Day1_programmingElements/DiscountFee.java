@@ -1,3 +1,4 @@
+ package Day1_programmingElements;
  import java.util.Scanner;
  
  public class DiscountFee {

@@ -1,3 +1,4 @@
+package Day1_programmingElements;
 public class Profit {
     public static void main(String[] args) {
         int costPrice = 129;

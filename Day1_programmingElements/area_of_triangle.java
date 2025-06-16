@@ -1,3 +1,5 @@
+package Day1_programmingElements;
+
 import java.util.Scanner;
 
 public class area_of_triangle {

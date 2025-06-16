@@ -1,5 +1,8 @@
+ package Day1_programmingElements;
+ 
+ 
 import java.util.Scanner;
-public class calulator {
+public class  basic_calulator {
     public static void main (String []args){
         Scanner input = new Scanner(System.in);
          System.out.println("first number");
@@ -33,12 +36,10 @@ public class calulator {
           case '/' :
             result = input1 / input2;
             System.out.println(result);
-            break; 
+            break;
 
-          default:
-              System.out.println("invalid operator");
 
-          
+          }
 
 
 
@@ -46,4 +47,5 @@ public class calulator {
     }
 
 }
+
 

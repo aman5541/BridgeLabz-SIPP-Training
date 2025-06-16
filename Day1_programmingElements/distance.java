@@ -1,5 +1,5 @@
 
-    
+   package Day1_programmingElements; 
 import java.util.Scanner;
 class Distance {
   public static void main(String[] args) {
