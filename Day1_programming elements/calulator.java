@@ -38,7 +38,7 @@ public class calulator {
           default:
               System.out.println("invalid operator");
 
-          }
+          
 
 
 
