@@ -33,8 +33,10 @@ public class calulator {
           case '/' :
             result = input1 / input2;
             System.out.println(result);
-            break;
+            break; 
 
+          default:
+              System.out.println("invalid operator");
 
           }
 
