@@ -1,7 +1,7 @@
 package Day1_programmingElements;
 import java.util.Scanner;
 
-public class square {
+public class Square {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         double perimeter, side;
