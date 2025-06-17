@@ -1,3 +1,4 @@
+package Day1_programmingElements;
 public class UniversityFee {
     public static void main(String[] args) { 
         int fee = 125000;
