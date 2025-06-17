@@ -2,7 +2,7 @@ package Day1_programmingElements;
 
 import java.util.Scanner;
 
-public class area_of_triangle {
+public class Area_of_triangle {
      public static void main (String []args){
         Scanner input = new Scanner(System.in);
          System.out.println("Height");
