@@ -2,7 +2,7 @@
  
  
 import java.util.Scanner;
-public class  basic_calulator {
+public class  BasicCalulator {
     public static void main (String []args){
         Scanner input = new Scanner(System.in);
          System.out.println("first number");
