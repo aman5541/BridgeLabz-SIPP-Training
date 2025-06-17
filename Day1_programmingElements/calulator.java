@@ -1,6 +1,6 @@
 package Day1_programmingElements;
 import java.util.Scanner;
-public class calulator {
+public class Calulator {
     public static void main (String []args){
         Scanner input = new Scanner(System.in);
          System.out.println("first number");
@@ -12,7 +12,7 @@ public class calulator {
          System.out.println("Second number");
           double input2 = input.nextDouble();
 
-          ;
+          
           double result;
           switch (operator){ 
 
