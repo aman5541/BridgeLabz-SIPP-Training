@@ -1,7 +1,7 @@
 package Day2_ControlFlow.Level1;
 
 import java.util.Scanner;
-public class calulator_switch {
+public class Calulator_switch {
     public static void main (String []args){
         Scanner input = new Scanner(System.in);
          System.out.println("first number");
