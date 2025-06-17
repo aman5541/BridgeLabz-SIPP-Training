@@ -1,3 +1,4 @@
+package Day1_programmingElements;
 public class SamAverage {
     public static void main(String[] args) {
         int maths = 94, physics = 95, chemistry = 96;
