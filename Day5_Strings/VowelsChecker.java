@@ -14,7 +14,7 @@ public class VowelsChecker {
                 return 2;  // Consonant
             }
         }
-        return 0;  // Not a letter
+      return 0;
     }
 
    
