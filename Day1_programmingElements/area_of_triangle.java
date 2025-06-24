@@ -8,9 +8,8 @@ public class Area_of_triangle {
          System.out.println("Height");
          double Height  = input.nextDouble();
 
-          
-        
-         System.out.println("base");
+                  
+          System.out.println("base");
           double base = input.nextDouble();
 
           double Area_in_cm = 0.5*base*Height;

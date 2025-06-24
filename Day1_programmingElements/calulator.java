@@ -1,8 +1,9 @@
 package Day1_programmingElements;
 import java.util.Scanner;
 public class Calulator {
-    public static void main (String []args){
-        Scanner input = new Scanner(System.in);
+   
+	public static void main (String []args){
+         Scanner input = new Scanner(System.in);
          System.out.println("first number");
          double input1 = input.nextDouble();
 
