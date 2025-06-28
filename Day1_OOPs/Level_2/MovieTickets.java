@@ -1,4 +1,4 @@
-public class MovieTickets {
+ public class MovieTickets {
      String movieName;
      String seatNumber;
      double price;
@@ -10,8 +10,8 @@ public class MovieTickets {
     }
 
     public void displayTicketDetails() {
-        System.out.println("Movie: " + movieName);
-        System.out.println("Seat: " + seatNumber);
+        System.out.println("Movie_: " + movieName);
+        System.out.println("Seat_: " + seatNumber);
         System.out.printf("Price: $%.2f%n", price);
     }
 

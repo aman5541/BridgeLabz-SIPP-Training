@@ -11,7 +11,7 @@
            
            }
             void display1(){
-               System.out.println(" Non static ");
+               System.out.println(" Non static method");
             }
            
             public static void main(String[]args){
