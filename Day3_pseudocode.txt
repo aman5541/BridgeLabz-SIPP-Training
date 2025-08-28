@@ -1,65 +1,84 @@
 Question -> 1.
-class Customer {
-    String name;
-    String address;
-}
 
-class Restaurant {
-    String name;
-    String location;
-}
-class DeliveryBoy {
-    String name;
-    String phone;
-}
-class Order {
-    Customer customer;
-    Restaurant restaurant;
-    DeliveryBoy deliveryBoy;
-    Order(Customer c, Restaurant r, DeliveryBoy d) {
-        customer = c;
-        restaurant = r;
-        deliveryBoy = d;
-    }
-    void showOrderDetails() {
-        print("Customer: " + customer.name);
-        print("Restaurant: " + restaurant.name);
-        print("Delivery By: " + deliveryBoy.name);
-    }
-}
-Order order = new Order(new Customer("Ravi", "Delhi"),
-                        new Restaurant("SpiceHub", "Connaught Place"),
-                        new DeliveryBoy("Amit", "9876543210"));
-order.showOrderDetails();
+Define class Customer:
+    - name
+    - address
+
+Define class Restaurant:
+    - name
+    - location
+
+Define class DeliveryBoy:
+    - name
+    - phone
+
+Define class Order:
+    - customer (type: Customer)
+    - restaurant (type: Restaurant)
+    - deliveryBoy (type: DeliveryBoy)
+
+    Constructor(c, r, d):
+        Set customer = c
+        Set restaurant = r
+        Set deliveryBoy = d
+
+    Method showOrderDetails():
+        Print "Customer: " + customer.name
+        Print "Restaurant: " + restaurant.name
+        Print "Delivery By: " + deliveryBoy.name
+
+Main:
+    Create an Order with:
+        - Customer: Ravi, Delhi
+        - Restaurant: SpiceHub, Connaught Place
+        - DeliveryBoy: Amit, 9876543210
+
+    Call order.showOrderDetails()
+
 
 
 Question -> 2.
-class Patient {
-    String name;
-    int age;
-    String disease;
-}
-HashMap<String, Patient> records = new HashMap();
-records.put("P101", new Patient("Ravi", 45, "Diabetes"));
-records.put("P102", new Patient("Priya", 30, "Flu"));
-Patient p = records.get("P101");
-print(p.name);
-records.put("P101", new Patient("Ravi", 45, "Recovered"));
-records.remove("P102");
+  Define class Patient:
+    - name
+    - age
+    - disease
+
+Create a map called records (key: patient ID, value: Patient)
+
+Add entries:
+    - "P101" → Patient("Ravi", 45, "Diabetes")
+    - "P102" → Patient("Priya", 30, "Flu")
+
+Retrieve patient with ID "P101" and store in variable p
+
+Print p.name  
+
+Update the record for "P101":
+    - Set new value: Patient("Ravi", 45, "Recovered")
+
+Remove the record with key "P102"
+
 
 
 Question -> 3.
-class Book {
-    String title;
-    int year;
-    double rating;
-}
 
-List<Book> books = List.of(
-    new Book("Book A", 2016, 4.6),
-    new Book("Book B", 2014, 4.8),
-    new Book("Book C", 2018, 4.9)
-List<Book> filtered = books.stream()
-    .filter(b -> b.year > 2015 && b.rating > 4.5)
-    .collect(Collectors.toList());
-filtered.forEach(b -> print(b.title));
+
+Define class Book:
+    - title
+    - year
+    - rating
+
+Create a list of books:
+    - Book A → year: 2016, rating: 4.6
+    - Book B → year: 2014, rating: 4.8
+    - Book C → year: 2018, rating: 4.9
+
+Filter the list to include only books where:
+    - year > 2015
+    - rating > 4.5
+
+Store the filtered books in a new list
+
+For each book in the filtered list:
+    Print book.title
+
