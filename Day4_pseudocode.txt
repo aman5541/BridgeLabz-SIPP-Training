@@ -1,0 +1,61 @@
+start
+  class Account
+    Attribute: accountNumber
+    Attribute: balance
+
+    Method: deposit(amount):
+        Add amount to balance
+
+    Method: withdraw(amount):
+        Print "Not implemented in base class"
+ 
+Class SavingsAccount extends Account:
+    Method: withdraw(amount):
+        If amount <= balance AND balance - amount >= minimum balance:
+            Deduct amount from balance
+            Print "Withdrawal successful"
+        Else:
+            Print "Insufficient balance or below minimum balance"
+
+Class CurrentAccount extends Account:
+    Method: withdraw(amount):
+        If amount <= balance + overdraft limit:
+            Deduct amount
+            Print "Withdrawal successful with/without overdraft"
+        Else:
+            Print "Overdraft limit exceeded"
+end
+
+
+// question number 2 
+start
+Interface Rentable:
+    Method: rent()
+    Method: returnVehicle()
+
+Abstract Class Vehicle:
+    Attribute: registrationNumber
+    Attribute: brand
+    Method: displayDetails()
+
+Class Car extends Vehicle implements Rentable:
+    Method: rent():
+        Print "Car rented"
+    Method: returnVehicle():
+        Print "Car returned"
+
+Class Bike extends Vehicle implements Rentable:
+    Method: rent():
+        Print "Bike rented"
+    Method: returnVehicle():
+        Print "Bike returned"
+
+Class VehicleFactory:
+    Method: getVehicle(type):
+        If type is "Car":
+            Return new Car()
+        Else if type is "Bike":
+            Return new Bike()
+        Else:
+            Print "Unknown vehicle type"
+end
