@@ -1,62 +1,82 @@
-1.   class Pet {
-    String name;
-    int age;
-    Pet(String name, int age) { ... }
-}
+Class Pet:
+    Properties:
+        - name
+        - age
+    Constructor(name, age):
+        Set this.name = name
+        Set this.age = age
 
-class Dog extends Pet {
-    String breed;
-    Dog(String name, int age, String breed) { ... }
-}
+Class Dog inherits from Pet:
+    Property:
+        - breed
+    Constructor(name, age, breed):
+        Call Pet constructor with name and age
+        Set this.breed = breed
 
-class Cat extends Pet {
-    boolean isIndoor;
-    Cat(String name, int age, boolean isIndoor) { ... }
-}
+Class Cat inherits from Pet:
+    Property:
+        - isIndoor
+    Constructor(name, age, isIndoor):
+        Call Pet constructor with name and age
+        Set this.isIndoor = isIndoor
 
-class Bird extends Pet {
-    String color;
-    Bird(String name, int age, String color) { ... }
-}
+Class Bird inherits from Pet:
+    Property:
+        - color
+    Constructor(name, age, color):
+        Call Pet constructor with name and age
+        Set this.color = color
+
+Main:
+    Create Dog d = new Dog("Buddy", 3, "Labrador")
+    Create Cat c = new Cat("Whiskers", 2, true)
+    Create Bird b = new Bird("Tweety", 1, "Yellow")
 
 
-Dog d = new Dog("Buddy", 3, "Labrador");
-Cat c = new Cat("Whiskers", 2, true);
-Bird b = new Bird("Tweety", 1, "Yellow");
 
 
 
+question 2 
 
-question -> 2.   
-Stack<String> undoStack = new Stack();
-String currentText = "";
 
-function type(text) {
-    undoStack.push(currentText);
-    currentText += text;
-}
+Variables:
+    currentText ← ""
+    undoStack ← empty stack
 
-function undo() {
-    if (!undoStack.isEmpty()) {
-        currentText = undoStack.pop();
-    }
-}
+Function type(text):
+    Push currentText into undoStack
+    currentText ← currentText + text
 
-function showText() {
-    print(currentText);
-}
- 
+Function undo():
+    If undoStack is not empty:
+        currentText ← Pop from undoStack
 
-Question -> 3. 
-HashMap<String, Integer> scores = new HashMap();
-scores.put("Amit", 85);
-scores.put("Priya", 92);
-scores.put("Rahul", 78);
+Function showText():
+    Print currentText
 
-String topStudent = scores.entrySet()
-    .stream()
-    .max((a, b) -> a.getValue() - b.getValue())
-    .get()
-    .getKey();
+Example:
+    type("Hello ")
+    type("World")
+    showText()     → prints "Hello World"
+    undo()
+    showText()     → prints "Hello "
 
-print("Top scorer: " + topStudent);
+
+
+question 3  ->
+Initialize scores map:
+    "Amit" → 85
+    "Priya" → 92
+    "Rahul" → 78
+
+Variables:
+    topStudent ← ""
+    maxScore ← 0
+
+For each entry (name, score) in scores:
+    If score > maxScore:
+        maxScore ← score
+        topStudent ← name
+
+Print "Top scorer: " + topStudent
+
